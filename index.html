@@ -7,22 +7,120 @@
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <style></style>
     <title>Document</title>
+    <style>
+     *  {
+         font-family:Helvetica;
+         font-weight: 400;
+      }
+      #titulo {
+          color: #0984e3;
+      }
+      #placar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      #jogador, #computador {
+          position: relative;
+          flex-grow: 1;
+          border-radius: 5px;
+          width: 200px;
+          padding: 20px;
+          color: #fff;
+    }
+    #jogador {
+        background-color: #ff7675;
+    }
+    #versus {
+        font-size: 40px;
+        text-align: center;
+        width: 70px;
+    }
+
+    #jogador-nome, #computador-nome {
+        margin: 0;
+        padding: 0;
+    }
+
+    #jogador-nome {
+        text-align: right;
+    }
+    #jogador-pontos, #computador-pontos{
+        position: absolute;
+        top: 8px;
+        font-size: 32px;
+    }
+    #jogador-pontos {
+        right: 20px;
+    }
+
+    #computador {
+        background-color: #74b9ff;
+    }
+    ul#jogador-escolha, ul#computador-escolha {
+           list-style: none;
+           text-align: center;
+           margin: 0;
+           padding: 0;
+    }
+
+    ul#jogador-escolha li, ul#computador-escolha li {
+           display: inline;
+    }
+
+    ul#jogador-escolha li a, ul#computador-escolha li a{
+           opacity: .2;
+    }
+    ul#jogador-escolha li a:hover{
+        opacity: 1;
+    }
+
+    ul#jogador-escolha li a img, ul#computador-escolha li a img{
+           max-width: 80px;
+    }
+    #mensagens {
+        background-color: #b2bec3;
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 20px;
+    }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Jogo da velha</h2>
-        <div class="grid">
-            <div class="celula" id="0"></div>
-            <div class="celula" id="1"></div>
-            <div class="celula" id="2"></div>
-            <div class="celula" id="3"></div>
-            <div class="celula" id="4"></div>
-            <div class="celula" id="5"></div>
-            <div class="celula" id="6"></div>
-            <div class="celula" id="7"></div>
-            <div class="celula" id="8"></div>
+    <div id="principal">
+        <h1 id="titulo">Papel e tesoura</h1>
+        <div id="placar">
+            <div id="jogador">
+            <h2 id="jogador-nome">Vitor</h2>
+            <span id="jogador-pontos">0</span>
+
+            <ul id="jogador-escolha">
+                <li><a id="jogador-escolha-1" onclick="jogar(1)"><img src="pedra.png"></a></li>
+                <li><a id="jogador-escolha-2" onclick="jogar(2)"><img src="papel.png"></a></li>
+                <li><a id="jogador-escolha-3" onclick="jogar(3)"><img src="tesoura.png"></a></li>
+            </ul>
         </div>
+    
+
+        <div id="versus">vs</div>
+
+
+            <div id="computador">
+                <h2 id="computador-nome">computador</h2>
+                <span id="computador-pontos">0</span>
+    
+                <ul id="computador-escolha">
+                    <li><a id="computador-escolha-1"><img src="pedra.png"></a></li>
+                    <li><a id="computador-escolha-2"><img src="papel.png"></a></li>
+                    <li><a id="computador-escolha-3"><img src="tesoura.png"></a></li>
+                </ul>
+          </div>
+        </div>
+        <div id="mensagens">mensagens</div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
